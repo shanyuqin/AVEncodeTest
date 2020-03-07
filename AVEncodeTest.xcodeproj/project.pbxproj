@@ -47,6 +47,9 @@
 		9470D81824127CED00828BBF /* resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9470D81724127CED00828BBF /* resource.bundle */; };
 		9470D81C24127F2F00828BBF /* SimpleDecoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9470D81A24127F2F00828BBF /* SimpleDecoderViewController.m */; };
 		9470D81D24127F2F00828BBF /* SimpleDecoderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9470D81B24127F2F00828BBF /* SimpleDecoderViewController.xib */; };
+		9470D83B2412953A00828BBF /* AudioPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9470D8392412953A00828BBF /* AudioPlayViewController.m */; };
+		9470D83C2412953A00828BBF /* AudioPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9470D83A2412953A00828BBF /* AudioPlayViewController.xib */; };
+		9470D83E241295BD00828BBF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9470D83D241295BC00828BBF /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,6 +252,10 @@
 		9470D81924127F2F00828BBF /* SimpleDecoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleDecoderViewController.h; sourceTree = "<group>"; };
 		9470D81A24127F2F00828BBF /* SimpleDecoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleDecoderViewController.m; sourceTree = "<group>"; };
 		9470D81B24127F2F00828BBF /* SimpleDecoderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleDecoderViewController.xib; sourceTree = "<group>"; };
+		9470D8382412953A00828BBF /* AudioPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayViewController.h; sourceTree = "<group>"; };
+		9470D8392412953A00828BBF /* AudioPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayViewController.m; sourceTree = "<group>"; };
+		9470D83A2412953A00828BBF /* AudioPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayViewController.xib; sourceTree = "<group>"; };
+		9470D83D241295BC00828BBF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		A475857098CD01367287A199 /* libPods-AVEncodeTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AVEncodeTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9B64AC7B904EECBD306B3 /* Pods-AVEncodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVEncodeTest.release.xcconfig"; path = "Target Support Files/Pods-AVEncodeTest/Pods-AVEncodeTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9470D83E241295BD00828BBF /* CoreAudio.framework in Frameworks */,
 				9470D8092412744A00828BBF /* CoreImage.framework in Frameworks */,
 				9470D7B0241159A800828BBF /* libavutil.a in Frameworks */,
 				943B0FD224113DAA00899005 /* AVFoundation.framework in Frameworks */,
@@ -705,6 +713,7 @@
 			children = (
 				9470D80A241274B100828BBF /* BaseViewController.h */,
 				9470D80B241274B100828BBF /* BaseViewController.m */,
+				9470D8372412952900828BBF /* AudioPlayViewController */,
 				9470D812241277A300828BBF /* SimpleDecoderController */,
 				9470D7EE24126E3200828BBF /* FFmpeg_HelloWord */,
 				9470D7E524126C0B00828BBF /* Mp3EncodeViewController */,
@@ -742,9 +751,20 @@
 			path = SimpleDecoderController;
 			sourceTree = "<group>";
 		};
+		9470D8372412952900828BBF /* AudioPlayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9470D8382412953A00828BBF /* AudioPlayViewController.h */,
+				9470D8392412953A00828BBF /* AudioPlayViewController.m */,
+				9470D83A2412953A00828BBF /* AudioPlayViewController.xib */,
+			);
+			path = AudioPlayViewController;
+			sourceTree = "<group>";
+		};
 		F8D20E36DBD521AD99392C86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9470D83D241295BC00828BBF /* CoreAudio.framework */,
 				9470D7F62412718200828BBF /* CoreImage.framework */,
 				943B0FD124113DA900899005 /* AVFoundation.framework */,
 				943B0FCF24113C0400899005 /* CoreMedia.framework */,
@@ -872,6 +892,7 @@
 				943B0E4B2410C4A500899005 /* Main.storyboard in Resources */,
 				9470D807241273A100828BBF /* FFmpeg_HelloWordController.xib in Resources */,
 				9470D81824127CED00828BBF /* resource.bundle in Resources */,
+				9470D83C2412953A00828BBF /* AudioPlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,6 +944,7 @@
 			files = (
 				943B0E422410C4A500899005 /* AppDelegate.m in Sources */,
 				9470D80C241274B100828BBF /* BaseViewController.m in Sources */,
+				9470D83B2412953A00828BBF /* AudioPlayViewController.m in Sources */,
 				9470D81C24127F2F00828BBF /* SimpleDecoderViewController.m in Sources */,
 				943B0E532410C4A600899005 /* main.m in Sources */,
 				943B0E982410DA1900899005 /* Mp3Encoder.cpp in Sources */,

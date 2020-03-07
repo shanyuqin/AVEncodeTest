@@ -10,6 +10,7 @@
 #import "Mp3EncodeViewController.h"
 #import "FFmpeg_HelloWordController.h"
 #import "SimpleDecoderViewController.h"
+#import "AudioPlayViewController.h"
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>

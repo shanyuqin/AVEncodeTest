@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     av_register_all();
+    
     char info[10000] = { 0 };
     printf("%s\n", avcodec_configuration());
     sprintf(info, "%s\n", avcodec_configuration());
