@@ -11,7 +11,7 @@
 #import "FFmpeg_HelloWordController.h"
 #import "SimpleDecoderViewController.h"
 #import "AudioPlayViewController.h"
-
+#import "MovieViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleArr = @[@"mp3EncodeTest",@"FFmpeg_Information",@"SimpleDecoder"];
+    self.titleArr = @[@"mp3EncodeTest",@"FFmpeg_Information",@"SimpleDecoder",@"MoviePlayTest"];
     [self.tableview reloadData];
 }
 
@@ -51,6 +51,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 2) {
         SimpleDecoderViewController * vc = [[SimpleDecoderViewController alloc] initWithNibName:@"SimpleDecoderViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 3) {
+        MovieViewController *vc = [[MovieViewController alloc] initWithNibName:@"MovieViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

@@ -103,8 +103,8 @@
  *   - For encoding, call avcodec_receive_packet(). On success, it will return
  *     an AVPacket with a compressed frame.
  *   Repeat this call until it returns AVERROR(EAGAIN) or an error. The
- *   AVERROR(EAGAIN) return value means that new input data is required to
- *   return new output. In this case, continue with sending input. For each
+ *   AVERROR(EAGAIN) return value means that new &(input data is required to
+ *   return new output. In this case, continue with &(send)ing input. For each
  *   input frame/packet, the codec will typically return 1 output frame/packet,
  *   but it can also be 0 or more than 1.
  *
